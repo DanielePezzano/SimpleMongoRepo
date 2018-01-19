@@ -15,7 +15,3 @@ src/packages/
 publish/
 Bin/
 src/.nuget
-src/SimpleMongoRepo/obj/Debug/netstandard1.6/dotnet-compile.rsp
-*.rsp
-src/SimpleMongoRepo/obj/Debug/netstandard1.6/.IncrementalCache
-*.pdb
