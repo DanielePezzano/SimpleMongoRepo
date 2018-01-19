@@ -11,6 +11,9 @@ obj/
 src/SimpleMongoRepo/log/
 src/SimpleMongoRepo/bin/
 src/SimpleMongoRepo/obj/
+CustomTest/log/
+CustomTest/bin/
+CustomTest/obj/
 src/packages/
 publish/
 Bin/
