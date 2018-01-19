@@ -2,6 +2,9 @@
   "version": "1.0.0-*",
 
   "dependencies": {
+    "MongoDB.Bson": "2.5.0",
+    "MongoDB.Driver": "2.5.0",
+    "MongoDB.Driver.Core": "2.5.0",
     "NETStandard.Library": "2.0.1"
   },
 
