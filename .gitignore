@@ -15,6 +15,7 @@ CustomTest/log/
 CustomTest/bin/
 CustomTest/obj/
 src/packages/
+packages/
 publish/
 Bin/
 src/.nuget
