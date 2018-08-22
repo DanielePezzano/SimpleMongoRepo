@@ -85,7 +85,7 @@
           }
         }
       },
-      "MongoDB.Bson/2.5.0": {
+      "MongoDB.Bson/2.7.0": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1",
@@ -101,11 +101,11 @@
           "lib/netstandard1.5/MongoDB.Bson.dll": {}
         }
       },
-      "MongoDB.Driver/2.5.0": {
+      "MongoDB.Driver/2.7.0": {
         "type": "package",
         "dependencies": {
-          "MongoDB.Bson": "2.5.0",
-          "MongoDB.Driver.Core": "2.5.0",
+          "MongoDB.Bson": "2.7.0",
+          "MongoDB.Driver.Core": "2.7.0",
           "NETStandard.Library": "1.6.1",
           "System.ComponentModel.TypeConverter": "4.1.0",
           "System.Linq.Queryable": "4.0.1"
@@ -117,11 +117,11 @@
           "lib/netstandard1.5/MongoDB.Driver.dll": {}
         }
       },
-      "MongoDB.Driver.Core/2.5.0": {
+      "MongoDB.Driver.Core/2.7.0": {
         "type": "package",
         "dependencies": {
           "DnsClient": "1.0.7",
-          "MongoDB.Bson": "2.5.0",
+          "MongoDB.Bson": "2.7.0",
           "NETStandard.Library": "1.6.1",
           "System.Collections.Specialized": "4.0.1",
           "System.Diagnostics.TraceSource": "4.0.0",
@@ -136,7 +136,7 @@
           "lib/netstandard1.5/MongoDB.Driver.Core.dll": {}
         }
       },
-      "NETStandard.Library/2.0.1": {
+      "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -1187,7 +1187,7 @@
           "ref/netstandard1.0/System.Reflection.Primitives.dll": {}
         }
       },
-      "System.Reflection.TypeExtensions/4.4.0": {
+      "System.Reflection.TypeExtensions/4.5.1": {
         "type": "package",
         "dependencies": {
           "System.Reflection": "4.3.0",
@@ -1899,13 +1899,13 @@
         "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll"
       ]
     },
-    "MongoDB.Bson/2.5.0": {
-      "sha512": "b7zQAUdSdfJ4kmGzAA+hv89N2Q6jm1td9WfTimgp8xWAsN4qbtIjA/JkAY1HA0Z8xfXQE3EmdUcDEwT8bkXfXg==",
+    "MongoDB.Bson/2.7.0": {
+      "sha512": "vzpTDHYX/X6gF9qtDuKRJiLkqpj5OZuT1bIzJCiBiU8CwJ37becYmaXuy/QSuWnYN6j6ZdVTWILKbWt2MXL8DA==",
       "type": "package",
-      "path": "MongoDB.Bson/2.5.0",
+      "path": "MongoDB.Bson/2.7.0",
       "files": [
         "License.rtf",
-        "MongoDB.Bson.2.5.0.nupkg.sha512",
+        "MongoDB.Bson.2.7.0.nupkg.sha512",
         "MongoDB.Bson.nuspec",
         "lib/net45/MongoDB.Bson.dll",
         "lib/net45/MongoDB.Bson.xml",
@@ -1913,13 +1913,13 @@
         "lib/netstandard1.5/MongoDB.Bson.xml"
       ]
     },
-    "MongoDB.Driver/2.5.0": {
-      "sha512": "VbHVV8Xdl3PcPU3XxdOUE/yc4BnPokg7k1XHU/3fEM/UdfCy0Ie0eXVE+U2HJXVcM3TQuuyVn+B1La2YY7X8dA==",
+    "MongoDB.Driver/2.7.0": {
+      "sha512": "5wP5BBwm5YO6h2Vhw6zQmOwSW9WP2d6kgRM6E7uIbwIJz4+j2trS2Wo7/+IYow5WVN8Jd6O27bIB/4gKNepO1Q==",
       "type": "package",
-      "path": "MongoDB.Driver/2.5.0",
+      "path": "MongoDB.Driver/2.7.0",
       "files": [
         "License.rtf",
-        "MongoDB.Driver.2.5.0.nupkg.sha512",
+        "MongoDB.Driver.2.7.0.nupkg.sha512",
         "MongoDB.Driver.nuspec",
         "lib/net45/MongoDB.Driver.dll",
         "lib/net45/MongoDB.Driver.xml",
@@ -1927,13 +1927,13 @@
         "lib/netstandard1.5/MongoDB.Driver.xml"
       ]
     },
-    "MongoDB.Driver.Core/2.5.0": {
-      "sha512": "/JYwBTEoWZDHiSePk0AF775c0YkSGSsHTA2+hWt9/UOCkYV/QOFujAWDdpFzBMCDpmQewbLRR1knYj76YOxffA==",
+    "MongoDB.Driver.Core/2.7.0": {
+      "sha512": "SepB4KT+zXA3iFaIFwXVKmk6BZIp0EGE/iWqNbDZ1mca9e8EhtqYPwOOzFmEbdKAzmVvF1y86kNI4agWP6I5sg==",
       "type": "package",
-      "path": "MongoDB.Driver.Core/2.5.0",
+      "path": "MongoDB.Driver.Core/2.7.0",
       "files": [
         "License.rtf",
-        "MongoDB.Driver.Core.2.5.0.nupkg.sha512",
+        "MongoDB.Driver.Core.2.7.0.nupkg.sha512",
         "MongoDB.Driver.Core.nuspec",
         "lib/net45/MongoDB.Driver.Core.dll",
         "lib/net45/MongoDB.Driver.Core.xml",
@@ -1941,16 +1941,15 @@
         "lib/netstandard1.5/MongoDB.Driver.Core.xml"
       ]
     },
-    "NETStandard.Library/2.0.1": {
-      "sha512": "oA6nwv9MhEKYvLpjZ0ggSpb1g4CQViDVQjLUcDWg598jtvJbpfeP2reqwI1GLW2TbxC/Ml7xL6BBR1HmKPXlTg==",
+    "NETStandard.Library/2.0.3": {
+      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "type": "package",
-      "path": "NETStandard.Library/2.0.1",
+      "path": "NETStandard.Library/2.0.3",
       "files": [
         "LICENSE.TXT",
-        "NETStandard.Library.2.0.1.nupkg.sha512",
+        "NETStandard.Library.2.0.3.nupkg.sha512",
         "NETStandard.Library.nuspec",
         "THIRD-PARTY-NOTICES.TXT",
-        "build/NETStandard.Library.targets",
         "build/netstandard2.0/NETStandard.Library.targets",
         "build/netstandard2.0/ref/Microsoft.Win32.Primitives.dll",
         "build/netstandard2.0/ref/System.AppContext.dll",
@@ -4420,13 +4419,14 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "System.Reflection.TypeExtensions/4.4.0": {
-      "sha512": "dkmh/ySlwnXJp/1qYP9uyKkCK1CXR/REFzl7abHcArxBcV91mY2CgrrzSRA5Z/X4MevJWwXsklGRdR3A7K9zbg==",
+    "System.Reflection.TypeExtensions/4.5.1": {
+      "sha512": "MW3MxOtKtIr/gMbPUvfXZK2rUN57NUJSUuDCzLOdMAuTO8I1Gt0LJJcNf6MMTm5BWAJrz/Lex8AhYAn8fWf4Xw==",
       "type": "package",
-      "path": "System.Reflection.TypeExtensions/4.4.0",
+      "path": "System.Reflection.TypeExtensions/4.5.1",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
-        "System.Reflection.TypeExtensions.4.4.0.nupkg.sha512",
+        "System.Reflection.TypeExtensions.4.5.1.nupkg.sha512",
         "System.Reflection.TypeExtensions.nuspec",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
@@ -4439,6 +4439,7 @@
         "lib/netstandard1.3/System.Reflection.TypeExtensions.dll",
         "lib/netstandard1.5/System.Reflection.TypeExtensions.dll",
         "lib/netstandard2.0/System.Reflection.TypeExtensions.dll",
+        "lib/uap10.0.16299/_._",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
@@ -4473,11 +4474,13 @@
         "ref/netstandard1.5/zh-hant/System.Reflection.TypeExtensions.xml",
         "ref/netstandard2.0/System.Reflection.TypeExtensions.dll",
         "ref/netstandard2.0/System.Reflection.TypeExtensions.xml",
+        "ref/uap10.0.16299/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
         "runtimes/aot/lib/netcore50/System.Reflection.TypeExtensions.dll",
+        "runtimes/aot/lib/uap10.0.16299/_._",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -5972,11 +5975,11 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "MongoDB.Bson >= 2.5.0",
-      "MongoDB.Driver >= 2.5.0",
-      "MongoDB.Driver.Core >= 2.5.0",
-      "NETStandard.Library >= 2.0.1",
-      "System.Reflection.TypeExtensions >= 4.4.0"
+      "MongoDB.Bson >= 2.7.0",
+      "MongoDB.Driver >= 2.7.0",
+      "MongoDB.Driver.Core >= 2.7.0",
+      "NETStandard.Library >= 2.0.3",
+      "System.Reflection.TypeExtensions >= 4.5.1"
     ],
     ".NETStandard,Version=v1.6": []
   },

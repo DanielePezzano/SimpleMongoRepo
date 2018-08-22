@@ -33,7 +33,7 @@ namespace SimpleMongoRepo.Interfaces
         Task<long> AsyncCountBy(Expression<Func<T, bool>> predicate);
         int SumBy(ProjectionDefinition<T, BsonDocument> groupDefinition);
         Task<long> AsyncDeleteAll();
-        Task CreateIndexOnNameField(FieldDefinition<T> definition);
+        Task CreateIndexOnNameField(FieldDefinition<T> definition, CreateIndexOptions options);
         bool Any(Expression<Func<T, bool>> predicate);
     }
 }

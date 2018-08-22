@@ -57,37 +57,37 @@ namespace SimpleMongoRepo
         public async Task<IEnumerable<T>> AsyncGetByField(string fieldName, string fieldValue)
         {
             var filter = Builders<T>.Filter.Eq(fieldName, fieldValue);
-            return (_collection.Count(filter) > 0) ? await _collection.Find(filter).ToListAsync() : new List<T>();
+            return (_collection.CountDocuments(filter) > 0) ? await _collection.Find(filter).ToListAsync() : new List<T>();
         }
 
         public IFindFluent<T, T> FindBy(Expression<Func<T, bool>> predicate)
         {
-            return (_collection.Count(predicate) > 0) ? _collection.Find(predicate) : null;
+            return (_collection.CountDocuments(predicate) > 0) ? _collection.Find(predicate) : null;
         }
 
         public T First(Expression<Func<T, bool>> predicate)
         {
-            return (_collection.Count(predicate) > 0) ? _collection.Find(predicate).First() : default(T);
+            return (_collection.CountDocuments(predicate) > 0) ? _collection.Find(predicate).First() : default(T);
         }
 
         public async Task<T> AsyncFirst(Expression<Func<T, bool>> predicate)
         {
-            return (_collection.Count(predicate) > 0) ? await _collection.Find(predicate).FirstAsync() : default(T);
+            return (_collection.CountDocuments(predicate) > 0) ? await _collection.Find(predicate).FirstAsync() : default(T);
         }
 
         public async Task<T> AsyncGetById(string id)
         {
-            return (_collection.Count(c => c.Id == id) > 0) ? await AsyncFirst(c => c.Id == id) : default(T);
+            return (_collection.CountDocuments(c => c.Id == id) > 0) ? await AsyncFirst(c => c.Id == id) : default(T);
         }
 
         public T GetById(string id)
         {
-            return (_collection.Count(c => c.Id == id) > 0) ? First(c => c.Id == id) : default(T);
+            return (_collection.CountDocuments(c => c.Id == id) > 0) ? First(c => c.Id == id) : default(T);
         }
 
         public List<T> GetListBy(Expression<Func<T, bool>> predicate)
         {
-            return (_collection.Count(predicate) > 0) ? _collection.Find(predicate).ToList() : new List<T>();
+            return (_collection.CountDocuments(predicate) > 0) ? _collection.Find(predicate).ToList() : new List<T>();
         }
 
         public async Task<IEnumerable<T>> AsyncGet(int startingFrom, int count)
@@ -137,7 +137,7 @@ namespace SimpleMongoRepo
 
         private async Task<bool> PerformAsyncDelete(FilterDefinition<T> filter)
         {
-            var result = (_collection.Count(filter) > 0) ? await _collection.DeleteOneAsync(filter) : null;
+            var result = (_collection.CountDocuments(filter) > 0) ? await _collection.DeleteOneAsync(filter) : null;
             if (result == null) return false;
             return result.DeletedCount != 0;
         }
@@ -156,7 +156,7 @@ namespace SimpleMongoRepo
 
         private bool PerformDelete(FilterDefinition<T> filter)
         {
-            var result = (_collection.Count(filter) > 0) ? _collection.DeleteOne(filter) : null;
+            var result = (_collection.CountDocuments(filter) > 0) ? _collection.DeleteOne(filter) : null;
             if (result == null) return false;
             return result.DeletedCount != 0;
         }
@@ -171,7 +171,7 @@ namespace SimpleMongoRepo
         public long CountBy(Expression<Func<T, bool>> predicate)
         {
             var filter = Builders<T>.Filter.Where(predicate);
-            return _collection.Count(filter);
+            return _collection.CountDocuments(filter);
         }
 
         public int SumBy(ProjectionDefinition<T, BsonDocument> groupDefinition)
@@ -188,23 +188,19 @@ namespace SimpleMongoRepo
         public async Task<long> AsyncCountBy(Expression<Func<T, bool>> predicate)
         {
             var filter = Builders<T>.Filter.Where(predicate);
-            return await _collection.CountAsync(filter);
+            return await _collection.CountDocumentsAsync(filter);
         }
 
-        public async Task CreateIndexOnNameField(FieldDefinition<T> definition)
+        public async Task CreateIndexOnNameField(FieldDefinition<T> definition, CreateIndexOptions options)
         {
-            var keys = Builders<T>.IndexKeys.Ascending(definition);
-            await _collection.Indexes.CreateOneAsync(keys);
+            var couponIndex = new IndexKeysDefinitionBuilder<T>().Ascending(definition);
+            var couponIndexModel = new CreateIndexModel<T>(couponIndex, options);
+            await _collection.Indexes.CreateOneAsync(couponIndexModel);
         }
 
         public bool Any(Expression<Func<T, bool>> predicate)
         {
-            return _collection.Count(predicate) > 0;
-        }
-        public async Task CreateIndexOnCollection(IMongoCollection<BsonDocument> collection, string field)
-        {
-            var keys = Builders<BsonDocument>.IndexKeys.Ascending(field);
-            await collection.Indexes.CreateOneAsync(keys);
+            return _collection.CountDocuments(predicate) > 0;
         }
     }
 }
