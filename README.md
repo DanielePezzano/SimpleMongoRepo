@@ -25,7 +25,7 @@ public class User: : IMongoEntity{
 }
 
 
-//connecto to the database
+//connect to the database
 var ConnectionString = "My mongoconnectionstring";
 IMongoDatabase _db = DatabaseFactory.Create(ConnectionString);
 
